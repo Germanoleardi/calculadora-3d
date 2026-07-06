@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 3D</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Calculadora de Custo 3D</h1>
+        <p>Bambu Lab A1 • Cálculo de impressão</p>
+    </header>
+
+
+    <div class="card">
+
+        <h2>Material</h2>
+
+        <div class="input-group">
+
+            <div>
+                <label>Peso da peça (g)</label>
+                <input id="peso" type="number" value="60">
+            </div>
+
+            <div>
+                <label>Preço do rolo (R$)</label>
+                <input id="precoRolo" type="number" value="110">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Impressão</h2>
+
+        <div class="input-group">
+
+            <div>
+                <label>Tempo (horas)</label>
+                <input id="tempo" type="number" value="5">
+            </div>
+
+            <div>
+                <label>Custo máquina/hora (R$)</label>
+                <input id="custoHora" type="number" value="1">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Energia</h2>
+
+        <div class="input-group">
+
+            <div>
+                <label>Potência (W)</label>
+                <input id="potencia" type="number" value="60">
+            </div>
+
+            <div>
+                <label>Preço kWh (R$)</label>
+                <input id="precoKwh" type="number" value="1">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Extras</h2>
+
+        <div class="input-group">
+
+            <div>
+                <label>Desperdício (%)</label>
+                <input id="desperdicio" type="number" value="10">
+            </div>
+
+            <div>
+                <label>Lucro (%)</label>
+                <input id="lucro" type="number" value="30">
+            </div>
+
+        </div>
+
+
+        <button onclick="calcular()">Calcular</button>
+
+
+        <div class="result">
+
+            <p>Material:
+                <strong id="materialResultado">R$ 0</strong>
+            </p>
+
+            <p>Energia:
+                <strong id="energiaResultado">R$ 0</strong>
+            </p>
+
+            <p>Máquina:
+                <strong id="maquinaResultado">R$ 0</strong>
+            </p>
+
+            <p>Total:
+                <strong id="totalResultado">R$ 0</strong>
+            </p>
+
+            <h2 class="price" id="vendaResultado">
+                R$ 0
+            </h2>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
